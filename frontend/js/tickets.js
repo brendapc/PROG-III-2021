@@ -2,8 +2,6 @@
     fetch('http://localhost:8989/tickets/destinations').then((response) => {
         return response.json()
     }).then((result) => {
-        console.log(result)
-
         result.forEach((destiny)=>{
             createItem(destiny)
         })
