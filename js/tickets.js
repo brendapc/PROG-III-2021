@@ -26,13 +26,21 @@ function createItem(destiny){
 }
 
 function createWarning(){
-    const mainDiv = document.querySelector('.main-content')
-    const card = document.createElement('div')
-    const title = document.createElement('h2')
-    
-    title.textContent = "É preciso iniciar o backend"
-    title.classList.add('fail-message')
-    card.appendChild(title)
-    //card.classList.add("card")
-    mainDiv.appendChild(card)
+   const fakeData = [
+        {
+            loc_chegada: "berlim"
+        },
+        {
+            loc_chegada: "amsterda"
+        },
+        {
+            loc_chegada: "nova-iorque"
+        },
+        {
+            loc_chegada: "russia"
+        }
+    ]
+    fakeData.forEach((destiny)=>{
+        createItem(destiny)
+    })
 }
