@@ -26,6 +26,15 @@ router.get('/destinations', (req, res) => {
     })
 })
 
+router.delete('/destinations/:ticketNumber', (req, res)=>{
+    const sql = 'DELETE FROM tickets WHERE numero = ?'
+    db.query(sql, [ req.params.ticketNumber ], (err, result)=>{
+        if(err) throw err
+        res.status(200).json(result)
+    })
+})
+
+
 router.get('/user/:id', (req, res )=>{
     const id = req.params.id
     const sql = 'SELECT tickets.numero, tickets.loc_chegada, usuarios.name, usuarios.id  FROM tickets, usuarios WHERE usuarios.id = tickets.id_user AND tickets.id_user = ?';

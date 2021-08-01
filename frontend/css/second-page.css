@@ -1,3 +1,56 @@
 .picture-section h2 {
     left: 45%;
 }
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #d3d3d3;
+}
+
+.main-content{
+    display: flex;
+    background-color: #e2e2e2;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.main-content .card{
+    background-color: lawngreen;
+    height: 150px;
+    width: 70%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-content .card img{
+   position: absolute;
+   filter: brightness(70%);
+   width: 100%;
+   height: auto;
+   top: -50px;
+}
+
+.main-content .card h2{
+    font-size: 24px;
+    z-index: 1;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-shadow: 6px 6px 20px #b8b8b8;
+}
+.main-content .card h2:hover{
+  text-decoration: underline;
+}
+
+.main-content .card img:hover{
+    transition: 2s;
+    transform: scale(1.5,1.5);
+}
