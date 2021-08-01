@@ -9,6 +9,7 @@
 }
 
 .main-content{
+    min-height: 100vh;
     display: flex;
     background-color: #e2e2e2;
     flex-direction: column;
@@ -19,7 +20,6 @@
 }
 
 .main-content .card{
-    background-color: lawngreen;
     height: 150px;
     width: 70%;
     overflow: hidden;

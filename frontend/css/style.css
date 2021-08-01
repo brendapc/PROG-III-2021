@@ -125,7 +125,7 @@ footer {
     background-color: #05445E;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 200px;
+    min-height: 200px;
 }
 
 .contact-information{
