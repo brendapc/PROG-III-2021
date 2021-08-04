@@ -5,19 +5,20 @@
     })
     .then((result) => {
         result.forEach((destiny)=>{
-            createItem(destiny)
+            const mainDiv = document.querySelector('.main-content')
+            const src = `./assets/${destiny.loc_chegada}.jpg`
+            createItem(destiny, src, mainDiv)
         })
     })
-    .catch(() => {createWarning()})
+    .catch(() => {createMock()})
 })()
 
-function createItem(destiny){
-    const mainDiv = document.querySelector('.main-content')
+function createItem(destiny, src, mainDiv){
     const card = document.createElement('div')
     const title = document.createElement('h2')
     const img = document.createElement('img')
     
-    img.src = `./assets/${destiny.loc_chegada}.jpg`
+    img.src = src
     title.textContent = destiny.loc_chegada.replace('-', " ")
     card.appendChild(title)
     card.appendChild(img)
@@ -25,7 +26,7 @@ function createItem(destiny){
     mainDiv.appendChild(card)
 }
 
-function createWarning(){
+function createMock(){
    const fakeData = [
         {
             loc_chegada: "berlim"
