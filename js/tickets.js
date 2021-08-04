@@ -1,18 +1,3 @@
-(function (){
-    fetch('http://localhost:8989/tickets/destinations')
-    .then((response) => {
-        return response.json()
-    })
-    .then((result) => {
-        result.forEach((destiny)=>{
-            const mainDiv = document.querySelector('.main-content')
-            const src = `./assets/${destiny.loc_chegada}.jpg`
-            createItem(destiny, src, mainDiv)
-        })
-    })
-    .catch(() => {createMock()})
-})()
-
 function createItem(destiny, src, mainDiv){
     const card = document.createElement('div')
     const title = document.createElement('h2')
@@ -26,7 +11,7 @@ function createItem(destiny, src, mainDiv){
     mainDiv.appendChild(card)
 }
 
-function createMock(){
+(function (){
    const fakeData = [
         {
             loc_chegada: "berlim"
@@ -41,7 +26,24 @@ function createMock(){
             loc_chegada: "russia"
         }
     ]
+    const mainDiv = document.querySelector('.main-content')
     fakeData.forEach((destiny)=>{
-        createItem(destiny)
+        const src = `./assets/${destiny.loc_chegada}.jpg`
+        createItem(destiny, src, mainDiv)
     })
-}
+})();
+
+(function (){
+    fetch('http://localhost:8989/tickets/destinations')
+    .then((response) => {
+        return response.json()
+    })
+    .then((result) => {
+        const mainDiv = document.querySelector('.main-content')
+        mainDiv.innerHTML = ' '
+        result.forEach((destiny)=>{
+            const src = `./assets/${destiny.loc_chegada}.jpg`
+            createItem(destiny, src, mainDiv)
+        })
+    })
+})();
