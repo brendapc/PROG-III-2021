@@ -1,5 +1,8 @@
 # PROG-III-2021
 
+
+Para ver uma demonstração da página vá para: https://brendapc.github.io/PROG-III-2021/
+=======
 ## Para rodar o backend (api) para fornecer as informações que preenchem o conteúdo do site:
 Para instalar as dependências
 ````
@@ -14,3 +17,4 @@ npm start
 - opção 1: entrar em https://brendapc.github.io/PROG-III-2021
 - opção 2: abrir o arquivo index.html e navegar
 - opção 3: usar a extensão "live server" no visual studio code, que inicia um servidor disponibilizando o frontend em uma porta, onde pode ser acessado por "localhost:INSIRA_AQUI_A_PORTA"
+

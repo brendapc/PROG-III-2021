@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/second-page.css">
-    <title>Passagens</title>
+    <link rel="stylesheet" href="./css/criarConta.style.css">
+    <title>Criar conta</title>
 </head>
 <body>
     <header>
@@ -15,28 +15,19 @@
             <ul>
                 <li><a href="passagens.html">Passagens</a></li>
                 <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="criarConta.html">Criar conta</a></li>
             </ul>
         </nav>
     </header>
-    <section class="picture-section">
-        <img src="./assets/aviao.jpeg" alt="">
-        <h2><a href="index.html">Voltar</a></h2>
-    </section>
-    <section class="cards-wrapper">
-        <div class="sides-card">
-            <h3>Diversos Destinos</h3>
-            
-            <img src="./assets/travel.svg" alt="">
-        </div>        
-        <div class="middle-card">
-            <h3>Os melhores preços</h3>
-            
-            <img src="./assets/money.svg" alt="">
-        </div>        
-        <div class="sides-card">
-            <h3>Mantido pela comunidade</h3>
-            
-            <img src="./assets/group.svg" alt="">
+    <section class="mainSection">
+        <div class="formWrapper">
+            <form id="register-form">
+                <input type="text" placeholder="Nome completo" id="name" />
+                <input type="text" placeholder="E-mail" id="email" />
+                <input type="text" placeholder="Senha" id="password" />
+                <input type="text" placeholder="Confirmação de senha" id="passwordConfirmation" />
+                <button type="button" onclick="registrar()">Enviar</button>
+            </form>
         </div>
     </section>
     <footer>
@@ -49,5 +40,6 @@
             <p>R. dos Andradas, 1001 - Centro Histórico, Porto Alegre - RS, 90020-007</p>
         </div>
     </footer>
+    <script src="js/register.js"></script>
 </body>
 </html>

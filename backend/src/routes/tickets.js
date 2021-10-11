@@ -18,6 +18,7 @@ router.get('/destinations/:destination', (req, res) => {
     })
 })
 
+/* PARA AVALIAÇÃO DO 1° TRIMESTRE DO 4° ANO */
 router.get('/destinations', (req, res) => {
     const sql = 'select * from tickets group by loc_chegada'
     db.query(sql, (err, result)=>{
@@ -44,9 +45,11 @@ router.get('/user/:id', (req, res )=>{
     })
 })
 
+
+//PARA AVALIAÇÃO DO 1° TRIMESTRE
 router.post('/', (req, res)=>{
-    const sql = 'INSERT INTO tickets VALUES (?,?,?,?,?,?,?)'
-    db.query(sql, [req.body.numero, req.body.cia, req.body.loc_partida, req.body.loc_chegada, req.body.data_partida, req.body.data_chegada, req.body.preco ],
+    const sql = 'INSERT INTO tickets  (numero, cia, loc_partida, loc_chegada, data_partida, data_chegada, preço, userid) VALUES (?,?,?,?,?,?,?,?)'
+    db.query(sql, [req.body.flightid, req.body.cia, req.body.origin, req.body.destination, req.body.departure, req.body.arrival, req.body.price, req.body.userid ],
         (err, result)=>{
             if(err) throw err
             res.status(200).json(result)

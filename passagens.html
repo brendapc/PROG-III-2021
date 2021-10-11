@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/passagens.style.css">
+    <title>Criar conta</title>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Tripckets</a></h1>
+        <nav>
+            <ul>
+                <li><a href="passagens.html">Passagens</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="criarConta.html">Criar conta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="mainSection">
+        <div class="formWrapper">
+            <form id="register-form">
+                <input type="text" placeholder="Número do voo" id="flightid" />
+                <input type="text" placeholder="Destino" id="destination" />
+                <input type="text" placeholder="Origem" id="origin" />
+                <input type="text" placeholder="CIA" id="cia" />
+                <input type="text" placeholder="Data de partida" id="departure" />
+                <input type="text" placeholder="Data de chegada" id="arrival" />
+                <input type="text" placeholder="Preço" id="price" />
+                <button type="button" onclick="addTicket()">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="contact-information">
+            <p>Para mais informações entre em contato:</p>
+            <p>(51) 12345-6789</p>
+        </div>
+        <div class="address-information">
+            <p>Porto Alegre, Rio Grande do Sul</p>
+            <p>R. dos Andradas, 1001 - Centro Histórico, Porto Alegre - RS, 90020-007</p>
+        </div>
+    </footer>
+    <script src="js/addTicket.js"></script>
+</body>
+</html>

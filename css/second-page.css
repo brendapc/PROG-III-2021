@@ -54,3 +54,12 @@
     transition: 2s;
     transform: scale(1.5,1.5);
 }
+
+.fail-message{
+    font-size: 24px;
+    z-index: 1;
+    color: #000;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-shadow: 6px 6px 20px #b8b8b8;   
+}
