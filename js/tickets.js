@@ -2,8 +2,9 @@ function createItem(destiny, src, mainDiv){
     const card = document.createElement('div')
     const title = document.createElement('h2')
     const img = document.createElement('img')
-    
-    img.src = src
+     
+    img.src = src 
+
     title.textContent = destiny.loc_chegada.replace('-', " ")
     card.appendChild(title)
     card.appendChild(img)
@@ -42,7 +43,7 @@ function createItem(destiny, src, mainDiv){
         const mainDiv = document.querySelector('.main-content')
         mainDiv.innerHTML = ' '
         result.forEach((destiny)=>{
-            const src = `./assets/${destiny.loc_chegada}.jpg`
+            const src = `./assets/plane.jpg`
             createItem(destiny, src, mainDiv)
         })
     })
